@@ -1,0 +1,105 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+h1, h2{
+    color: white;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    display: flex;
+    width: 80vw;
+    height: 80vh;
+    background-color: white;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.card{
+    display: flex;
+    position: relative;
+    min-height: 500px;
+    height: 90%;
+    min-width: 260px;
+    width: 30%;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.5s;
+    border-radius: 15px;
+}
+
+.open,
+.closed{
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.closed h2{
+    transform: translateY(-100px);
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.closed{
+    background-color: white;
+    transition: 0.5s;
+}
+.card:hover .closed{
+    height: 10%;
+    transition: .5s;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.card:hover .closed img{
+    transition: 0.5s;
+    transform: translateY(100px);
+}
+
+.card:hover .closed h2{
+    transform: translateY(25px);
+}
+
+.card:hover .open{
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.closed img{
+    max-height: 240px;
+    height: 100%;
+    
+    transform: translateY(-100px);
+}
+
+.content a img{
+    width: 40px;
+}
